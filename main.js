@@ -17,7 +17,7 @@ submitNewTaskButton.addEventListener('click', addNewTask);
 
 function addNewTask(event) {
     event.preventDefault();
-    const newTaskTitle = document.getElementById('newTaskTitle');
+    const inputTaskTitle = document.getElementById('newTaskTitle');
     if(newTaskTitle.value === "") {
         alert('Please fill out all fields');
         return;
@@ -27,10 +27,18 @@ function addNewTask(event) {
     newTask.classList.add('task');
     
     
-    const newrTaskDetails = document.getElementById('newTaskDetails');
+    const inputTaskDetails = document.getElementById('newTaskDetails');
+    inputTaskDetails.classList.add('smallerFont');
     taskList.appendChild(newTask);
-    newTask.innerHTML = `<p>${newTaskTitle.value}<br>${newrTaskDetails.value}</p>`;
+    newTask.innerHTML = `<p>${inputTaskTitle.value}<br>${inputTaskDetails.value}</p>`;
     
+    if(document.getElementById('newTaskPriority').value === 'high') {
+        newTask.style.backgroundColor = 'rgb(236, 100, 75)';
+    } else if(document.getElementById('newTaskPriority').value === 'medium') {
+        newTask.style.backgroundColor = 'rgb(248, 119, 14)';
+    } else {
+        newTask.style.backgroundColor = 'rgb(237, 219, 60)';
+    }
     document.getElementById('newTaskFormContainer').style.display = 'none';
 }
 

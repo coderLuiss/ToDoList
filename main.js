@@ -28,10 +28,13 @@ function addNewTask(event) {
     
     
     const inputTaskDetails = document.getElementById('newTaskDetails');
-    inputTaskDetails.classList.add('smallerFont');
     taskList.appendChild(newTask);
-    newTask.innerHTML = `<p>${inputTaskTitle.value}<br>${inputTaskDetails.value}</p>`;
-    
+    newTask.innerHTML = `
+    <p>
+    <span class="task-title">${inputTaskTitle.value}</span><br>
+    <span class="task-details">${inputTaskDetails.value}</span>
+    </p>
+    <button class="complete-task-button"></button>`;    
     if(document.getElementById('newTaskPriority').value === 'high') {
         newTask.style.backgroundColor = 'rgb(236, 100, 75)';
     } else if(document.getElementById('newTaskPriority').value === 'medium') {
@@ -40,6 +43,8 @@ function addNewTask(event) {
         newTask.style.backgroundColor = 'rgb(237, 219, 60)';
     }
     document.getElementById('newTaskFormContainer').style.display = 'none';
+    inputTaskTitle.value = '';
+    inputTaskDetails.value = '';
 }
 
 

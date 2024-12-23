@@ -3,6 +3,7 @@ const cancelNewTaskButton = document.getElementById('closePopup');
 const submitNewTaskButton = document.getElementById('submitButton');
 const taskList = document.getElementById('taskList');
 const completedTaskButton = document.getElementById('complete-task-button');
+const tasksArray = [];
 
 addTaskButton.addEventListener('click', () => {
     document.getElementById('newTaskFormContainer').style.display = 'flex';
@@ -43,6 +44,13 @@ function addNewTask(event) {
     </p>
     <button id="complete-task-button"></button>`;    
     
+    const newTaskData = {
+        title: inputTaskTitle.value,
+        details: inputTaskDetails.value,
+        priority: document.getElementById('newTaskPriority').value
+    }
+    tasksArray.push(newTaskData);
+
     const completedTaskButton = newTask.querySelector('#complete-task-button');
     if (completedTaskButton) {
         completedTaskButton.addEventListener('click', (event) => {
@@ -50,13 +58,15 @@ function addNewTask(event) {
         event.target.style.boxShadow = "inset 0 0 5px rgba(0, 0, 0, 0.5)";
         event.target.style.padding = "5px";
         setTimeout(() => {
-            taskList.remove(newTask);
+            taskList.removeChild(newTask);
         }, 2000);
     });
     }
+    taskList.appendChild(newTask);
     document.getElementById('newTaskFormContainer').style.display = 'none';
     inputTaskTitle.value = '';
     inputTaskDetails.value = '';
+    console.log(tasksArray);
 }
 
 

@@ -102,8 +102,8 @@ cursor: pointer;
     }
 
 .task {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+    background-color: #dddee0;
+    border: 1px solid #a5a4a4;
     border-radius: 10px;
     padding: 15px;
     margin: 10px 0;
@@ -123,12 +123,13 @@ font-size: 1.5em;
 font-size: 1em;
 }
 
-.complete-task-button {
+#complete-task-button {
 width: 30px;
 height: 30px;
 border-radius: 50%;
 border: 1px solid black;
 background-color: white;
+cursor: pointer;
 }
 
 body {

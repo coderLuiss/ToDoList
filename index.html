@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id = "SortButton">High to Low</button>
-        
+    <button id = "SortButton">High to Low</button>   
     <h1 id="todoHeader">ToDo List</h1>
     <button id="addTaskButton">+</button>
-    
-    <ul id="taskList">
-        
+    <!-- List for all TODO task that are added -->
+    <ul id="taskList">  
     </ul>
-    
-    
+    <!-- Popup from to add a new ToDo Task -->
     <div id="newTaskFormContainer">
         <h2>Add a Task</h2>
         <form id="newTaskForm">
+          <!-- Title and Detail input box for new TODO task -->
           <input type="text" id="newTaskTitle" placeholder="New Task Title">
           <textarea id="newTaskDetails" placeholder="Details (optional)"></textarea>
+          <!-- Priority select dropdown-->
           <label for="newTaskPriority">Priority:</label>
           <select id="newTaskPriority">
             <option value="low">Low</option>

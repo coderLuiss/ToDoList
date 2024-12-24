@@ -22,8 +22,6 @@
   top: 10px;
   right: 10px;
 }
-
-
   
 #newTaskFormContainer {
   display: none;
@@ -42,8 +40,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-  
-  
+
 #newTaskFormContainer h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -94,10 +91,10 @@
 #taskList {
   list-style-type: none;
   padding: 0;
-  margin: 80px auto 20px auto; /* Add margin to ensure it appears below the header */
-  width: 30%; /* Adjust width as needed */
+  margin: 80px auto 20px auto;
+  width: 30%;
   text-align: center;
-  }
+}
 
 .task {
   background-color: #dddee0;

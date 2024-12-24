@@ -136,25 +136,16 @@ body {
   background-color: #dddee0;
 }
 
-#sort {
+#SortButton {
   width: 200px;
   padding: 10px;
   border: 2px solid #131313;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #dddee0;
   font-size: 16px;
   color: #333;
   cursor: pointer;
-  appearance: none; /* Remove default arrow */
-  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><path d="M6 9l6-6 6 6"/></svg>');
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 16px;
-}
-
-#sort option {
-  padding: 10px;
-  background-color: #fff;
-  color: #333;
-  font-size: 16px;
 }
